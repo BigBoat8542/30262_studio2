@@ -35,7 +35,7 @@
 
     <script>
     // Set your Mapbox access token
-    mapboxgl.accessToken = "";
+    mapboxgl.accessToken = 'pk.eyJ1IjoibHVrZTg1NDIiLCJhIjoiY2s4cnE5bnRrMGhpajNtcG00b3lreXlycyJ9.AcYo0A3SUOqMDzGmF83huQ’;
 
     /* The map variable stores a new mapbox gl map.
     * map's center set to [-122.467, 37.798] with zoom 13. 
@@ -49,9 +49,12 @@
     style: "",
     container: "mapId"
     });
-
     </script>
-
+  
+  var map_luke = L.mapbox.map('map')
+    .setView([40, -74.50], 10)
+    .addLayer(L.mapbox.styleLayer('mapbox://styles/luke8542/cknhwzl1403c717o6f3o4xyil'));
+  <p> This Map contains all of the Polling places and Political Wards in the City of Philadelphia, and can be used as a resource for eager voters as local elections come up this spring. The daata was collected from opendataaphilly.com and uses the colors of the city of Philadelphia. To define the colors, I googled hex colors and found some that resembled closely to the city's colors on the logo. I kept a white background for simplicity, as this map serves the purpose of informing voters where to vote and wards rather than many other major details. </p>
 </body>
 
 </html>
