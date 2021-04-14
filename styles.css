@@ -1,9 +1,9 @@
 ul {
  list-style-type: none;
- margin: 1px;
- padding: 1px;
+ margin: 1.5px;
+ padding: 1.5px;
  overflow: hidden;
- background-color: white;
+ background-color: blue;
 }
 
 li {
@@ -26,9 +26,9 @@ li a {
 
 /* Links will change color when hovered over */
 li a:hover {
- background-color: #a09f9f;
+ background-color: #6e6e6e;
 }
 
 .active {
- background-color: #a09f9f;
+ background-color: #6e6e6e;
 }
