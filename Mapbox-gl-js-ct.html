@@ -53,33 +53,19 @@ zoom: 13
      * and set its HTML content to:
      * "<b>The Presidio.</b><br /> Explore to find a drinking fountain!"
      */
-var markerHeight = 50, markerRadius = 10, linearOffset = 25;
-var popupOffsets = {
-'top': [0, 0],
-'top-left': [0,0],
-'top-right': [0,0],
-'bottom': [0, -markerHeight],
-'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
-'left': [markerRadius, (markerHeight - markerRadius) * -1],
-'right': [-markerRadius, (markerHeight - markerRadius) * -1]
-};
-var popup = new mapboxgl.Popup({offset: popupOffsets, className: 'my-class'})
-.setLngLat(e.lngLat)
-.setHTML("<b>The Presidio.</b><br /> Explore to find a drinking fountain!")
-.setMaxWidth("300px")
-.addTo(map);    
+var popup = new mapboxgl.Popup().setHTML("<b>The Presidio.</b><br /> Explore to find a drinking fountain!");
+
+    
     /* Create a variable called "marker," 
      * add to it a new Marker (ref: https://docs.mapbox.com/mapbox-gl-js/api/#marker),
      * set its Lng, Lat to [-122.4700, 37.8011],
      * set its popup to the popup variable you created earlier,
      * and add it to the map.
      */
-    var marker = new mapboxgl.Marker({
-color: "#FFFFFF",
-draggable: true
-}).setLngLat([-122.4700, 37.8011])
-.addTo(map);
+     var marker = new mapboxgl.Marker()
+       .setLngLat([-122.4700, 37.8011])
+       .setPopup(popup)
+       .addTo(map);
   </script>
 </body>
 
